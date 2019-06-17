@@ -74,7 +74,5 @@ namespace Back_end_Assignment
             var Client = new Client(PurchaseValue, Turnover, CardChoice);
             OutputResults(Client);
         }
-
-        
     }
 }
