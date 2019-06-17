@@ -5,43 +5,24 @@ using System.Text;
 
 namespace Back_end_Assignment
 {
-    class PayDesk
+    public class PayDesk
     {
-        private double purchaseValue;
-
-        public double PurchaseValue
+        public static void GetPurchaseValue(Client client)
         {
-            get { return purchaseValue; }
-            set { purchaseValue = value; }
+            Console.WriteLine($"Purchase value: ${client.PurchaseValue:F2}");
         }
-        private DiscountCard card;
-
-        public DiscountCard Card
+        public static void GetDiscountRate(Client client)
         {
-            get { return card; }
-            set { card = value; }
+            Console.WriteLine($"Discount Rate: {client.Card.InitialDiscount:F1}%");
         }
-        public PayDesk(double PurchaseValue, double Turnover, int TypeOfCard)
+        public static void GetDiscount(Client client)
         {
-            this.PurchaseValue = PurchaseValue;
-            switch (TypeOfCard)
-            {
-                case 1:
-                    this.card = new BronzeCard(Turnover);
-                    break;
-                case 2:
-                    this.card = new SilverCard(Turnover);
-                    break;
-                case 3:
-                    this.card = new GoldCard(Turnover);
-                    break;
-                default:
-                    break;
-            }
+            Console.WriteLine($"Discount: ${client.Discount:F2}");
         }
-        static void GetDiscount()
+        public static void GetTotal(Client client)
         {
-            
+            Console.WriteLine($"Total: {(client.PurchaseValue - client.Discount):F2}");
         }
+        
     }
 }

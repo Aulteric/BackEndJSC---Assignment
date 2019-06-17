@@ -4,37 +4,75 @@ namespace Back_end_Assignment
 {
     class Program
     {
-        private static void Inputing()
+        private static int InputCardChoice()
         {
             Console.WriteLine("Please choose the type of card you want to have" + Environment.NewLine + "1.Bronze" +
                 Environment.NewLine + "2.Silver" + Environment.NewLine + "3.Gold");
-            var CardChoice = ChoiceValidator();
+            return ChoiceValidator();
+        }
+
+        private static double InputTurnover()
+        {
+            Console.WriteLine("Please input the turnover from last month: ");
+            return DoubleValidator();
+        }
+
+        private static double InputPurchaseValue()
+        {
+            Console.WriteLine("Please input the Purchase value of the client: ");
+            return DoubleValidator();
+        }
+
+        private static double DoubleValidator()
+        {
+            var temp = Console.ReadLine();
+            double Validated;
+            if (!(double.TryParse(temp, out Validated)))
+            {
+                if (Validated < 0)
+                {
+                    Console.WriteLine("Please insert a valid number");
+                    Validated = DoubleValidator();
+                }
+            }
+            return Validated;
         }
 
         private static int ChoiceValidator()
         {
             var temp = Console.ReadLine();
-            int choice;
-            if (int.TryParse(temp, out choice))
+            int Choice;
+            if (int.TryParse(temp, out Choice))
             {
-                if (choice > 3 || choice < 1)
+                if (Choice > 3 || Choice < 1)
                 {
                     Console.WriteLine("Please insert a valid choice");
-                    choice = ChoiceValidator();
+                    Choice = ChoiceValidator();
                 }
             }
             else
             {
                 Console.WriteLine("Please insert a valid choice");
-                choice = ChoiceValidator();
+                Choice = ChoiceValidator();
             }
-            return choice;
+            return Choice;
         }
 
         static void Main(string[] args)
         {
-            Inputing();
+            var CardChoice = InputCardChoice();
+            var Turnover = InputTurnover();
+            var PurchaseValue = InputPurchaseValue();
+            var Client = new Client(PurchaseValue, Turnover, CardChoice);
+            OutputResults(Client);
         }
 
+        private static void OutputResults(Client Client)
+        {
+            PayDesk.GetPurchaseValue(Client);
+            PayDesk.GetDiscountRate(Client);
+            PayDesk.GetDiscount(Client);
+            PayDesk.GetTotal(Client);
+        }
     }
 }
