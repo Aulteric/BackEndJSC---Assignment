@@ -21,7 +21,7 @@ namespace Back_end_Assignment
         }
         public static void GetTotal(Client client)
         {
-            Console.WriteLine($"Total: {(client.PurchaseValue - client.Discount):F2}");
+            Console.WriteLine($"Total: ${(client.PurchaseValue - client.Discount):F2}");
         }
         
     }
