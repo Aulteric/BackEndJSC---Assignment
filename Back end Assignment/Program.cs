@@ -58,6 +58,14 @@ namespace Back_end_Assignment
             return Choice;
         }
 
+        private static void OutputResults(Client Client)
+        {
+            PayDesk.GetPurchaseValue(Client);
+            PayDesk.GetDiscountRate(Client);
+            PayDesk.GetDiscount(Client);
+            PayDesk.GetTotal(Client);
+        }
+        
         static void Main(string[] args)
         {
             var CardChoice = InputCardChoice();
@@ -67,12 +75,6 @@ namespace Back_end_Assignment
             OutputResults(Client);
         }
 
-        private static void OutputResults(Client Client)
-        {
-            PayDesk.GetPurchaseValue(Client);
-            PayDesk.GetDiscountRate(Client);
-            PayDesk.GetDiscount(Client);
-            PayDesk.GetTotal(Client);
-        }
+        
     }
 }
