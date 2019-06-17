@@ -6,7 +6,7 @@ namespace Back_end_Assignment.Cards
 {
     public class BronzeCard : DiscountCard
     {
-        public BronzeCard(string Owner, double PreviousMonthTurnover) : base(Owner, PreviousMonthTurnover)
+        public BronzeCard(double PreviousMonthTurnover) : base(PreviousMonthTurnover)
         {
             if (PreviousMonthTurnover > 300)
             {
@@ -18,6 +18,5 @@ namespace Back_end_Assignment.Cards
             }
             else InitialDiscount = 0;
         }
-
     }
 }

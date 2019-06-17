@@ -6,7 +6,7 @@ namespace Back_end_Assignment.Cards
 {
     public class SilverCard : DiscountCard
     {
-        public SilverCard(string Owner, double PreviousMonthTurnover) : base(Owner, PreviousMonthTurnover)
+        public SilverCard(double PreviousMonthTurnover) : base(PreviousMonthTurnover)
         {
             if (PreviousMonthTurnover > 300)
             {

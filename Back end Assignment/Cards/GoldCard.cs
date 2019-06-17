@@ -6,16 +6,17 @@ namespace Back_end_Assignment.Cards
 {
     class GoldCard : DiscountCard
     {
-        public GoldCard(string Owner, double PreviousMonthTurnover) : base(Owner, PreviousMonthTurnover)
+        public GoldCard(double PreviousMonthTurnover) : base(PreviousMonthTurnover)
         {
             if (PreviousMonthTurnover > 100)
             {
-                InitialDiscount = 2 + (int)(PreviousMonthTurnover / 100);
+                InitialDiscount = 2 + Math.Floor(PreviousMonthTurnover / 100);
                 if (InitialDiscount > 10)
                 {
                     InitialDiscount = 10;
                 }
             }
+            else InitialDiscount = 2;
         }
     }
 }
