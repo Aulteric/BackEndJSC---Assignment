@@ -5,4 +5,4 @@ And finally it asks for The Purchase Value of the order.
 After all is set up to output the information required in the Assignment.
 
 
-how it works: i used a menu based system to help the tester navigate through the application, validated the choice and double inputs cause its not possible to have a negative value for the turnover or purchase. After that its all saved in a client class, i saved the discount as a property for an easier use later on when printing the output. And made the static class PayDesk to print out all the required data for the assignment.
+How it works: I used a menu based system to help the user navigate through the application, the initial choice is validated as well as the double inputs cause it's not possible to have a negative value for the turnover or purchase. After that its all saved in a client class, I saved the discount as a property for an easier use later on when printing the output and made the static class PayDesk to print out all the required data for the assignment.
