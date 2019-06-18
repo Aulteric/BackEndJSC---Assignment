@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Back_end_Assignment.Cards
+namespace Back_Еnd_Assignment.Cards
 {
     public class BronzeCard : DiscountCard
     {

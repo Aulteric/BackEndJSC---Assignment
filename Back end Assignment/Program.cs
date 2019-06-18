@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Back_end_Assignment
+namespace Back_Еnd_Assignment
 {
     class Program
     {

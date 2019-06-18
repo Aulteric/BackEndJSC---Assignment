@@ -1,9 +1,9 @@
-﻿using Back_end_Assignment.Cards;
+﻿using Back_Еnd_Assignment.Cards;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Back_end_Assignment
+namespace Back_Еnd_Assignment
 {
     public class PayDesk
     {
