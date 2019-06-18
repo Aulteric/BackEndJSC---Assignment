@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back end Assignment.csproj": {}
+    "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back End Assignment.csproj": {}
   },
   "projects": {
-    "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back end Assignment.csproj": {
+    "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back End Assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back end Assignment.csproj",
-        "projectName": "Back end Assignment",
-        "projectPath": "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back end Assignment.csproj",
+        "projectUniqueName": "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back End Assignment.csproj",
+        "projectName": "Back End Assignment",
+        "projectPath": "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\Back End Assignment.csproj",
         "packagesPath": "C:\\Users\\aulte\\.nuget\\packages\\",
         "outputPath": "C:\\Visual Studio 2019\\Repos\\Back end Assignment\\Back end Assignment\\obj\\",
         "projectStyle": "PackageReference",
